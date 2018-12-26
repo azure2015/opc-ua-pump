@@ -5,18 +5,126 @@
     </NamespaceUris>
     <Aliases>
         <Alias Alias="Int16">i=4</Alias>
-        <Alias Alias="UInt32">i=7</Alias>
         <Alias Alias="String">i=12</Alias>
+        <Alias Alias="ByteString">i=15</Alias>
+        <Alias Alias="LocalizedText">i=21</Alias>
         <Alias Alias="HasModellingRule">i=37</Alias>
         <Alias Alias="HasTypeDefinition">i=40</Alias>
         <Alias Alias="HasSubtype">i=45</Alias>
         <Alias Alias="HasProperty">i=46</Alias>
+        <Alias Alias="HasComponent">i=47</Alias>
+        <Alias Alias="PumpStatusType">ns=1;i=3002</Alias>
     </Aliases>
     <Extensions>
         <Extension>
-            <ua:ModelInfo Tool="UaModeler" Hash="ERwS3EHsnvnl4c7Pw6DC2w==" Version="1.5.2"/>
+            <ua:ModelInfo Tool="UaModeler" Hash="IWoaNSvP1T0ayjKLp2Ahnw==" Version="1.5.2"/>
         </Extension>
     </Extensions>
+    <UADataType NodeId="ns=1;i=3002" BrowseName="1:PumpStatusType">
+        <DisplayName>PumpStatusType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6004</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:PumpStatusType">
+            <Field Name="OK" Value="0"/>
+            <Field Name="LimitAlarm" Value="1"/>
+            <Field Name="Fault" Value="2"/>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="LocalizedText" ParentNodeId="ns=1;i=3002" ValueRank="1" NodeId="ns=1;i=6004" ArrayDimensions="3" BrowseName="EnumStrings">
+        <DisplayName>EnumStrings</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+        </References>
+        <Value>
+            <uax:ListOfLocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>OK</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>LimitAlarm</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Fault</uax:Text>
+                </uax:LocalizedText>
+            </uax:ListOfLocalizedText>
+        </Value>
+    </UAVariable>
+    <UAVariable SymbolicName="TypeDictionary_BinarySchema" DataType="ByteString" NodeId="ns=1;i=6005" BrowseName="1:TypeDictionary">
+        <DisplayName>TypeDictionary</DisplayName>
+        <Description>Collects the data type descriptions of http://yourorganisation.org/Pump/</Description>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6006</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">i=93</Reference>
+        </References>
+        <Value>
+            <uax:ByteString>PG9wYzpUeXBlRGljdGlvbmFyeSB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZ
+        W1hLWluc3RhbmNlIiB4bWxuczp0bnM9Imh0dHA6Ly95b3Vyb3JnYW5pc2F0aW9uLm9yZy9Qd
+        W1wLyIgRGVmYXVsdEJ5dGVPcmRlcj0iTGl0dGxlRW5kaWFuIiB4bWxuczpvcGM9Imh0dHA6L
+        y9vcGNmb3VuZGF0aW9uLm9yZy9CaW5hcnlTY2hlbWEvIiB4bWxuczp1YT0iaHR0cDovL29wY
+        2ZvdW5kYXRpb24ub3JnL1VBLyIgVGFyZ2V0TmFtZXNwYWNlPSJodHRwOi8veW91cm9yZ2Fua
+        XNhdGlvbi5vcmcvUHVtcC8iPgogPG9wYzpJbXBvcnQgTmFtZXNwYWNlPSJodHRwOi8vb3BjZ
+        m91bmRhdGlvbi5vcmcvVUEvIi8+CiA8b3BjOkVudW1lcmF0ZWRUeXBlIExlbmd0aEluQml0c
+        z0iMzIiIE5hbWU9IlB1bXBTdGF0dXNUeXBlIj4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOY
+        W1lPSJPSyIgVmFsdWU9IjAiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJMaW1pd
+        EFsYXJtIiBWYWx1ZT0iMSIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IkZhdWx0I
+        iBWYWx1ZT0iMiIvPgogPC9vcGM6RW51bWVyYXRlZFR5cGU+Cjwvb3BjOlR5cGVEaWN0aW9uY
+        XJ5Pgo=</uax:ByteString>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6005" NodeId="ns=1;i=6006" BrowseName="NamespaceUri">
+        <DisplayName>NamespaceUri</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6005</Reference>
+        </References>
+        <Value>
+            <uax:String>http://yourorganisation.org/Pump/</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable SymbolicName="TypeDictionary_XmlSchema" DataType="ByteString" NodeId="ns=1;i=6007" BrowseName="1:TypeDictionary">
+        <DisplayName>TypeDictionary</DisplayName>
+        <Description>Collects the data type descriptions of http://yourorganisation.org/Pump/</Description>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6008</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">i=92</Reference>
+        </References>
+        <Value>
+            <uax:ByteString>PHhzOnNjaGVtYSBlbGVtZW50Rm9ybURlZmF1bHQ9InF1YWxpZmllZCIgdGFyZ2V0TmFtZXNwYWNlPSJod
+        HRwOi8veW91cm9yZ2FuaXNhdGlvbi5vcmcvUHVtcC9UeXBlcy54c2QiIHhtbG5zOnRucz0ia
+        HR0cDovL3lvdXJvcmdhbmlzYXRpb24ub3JnL1B1bXAvVHlwZXMueHNkIiB4bWxuczp1YT0ia
+        HR0cDovL29wY2ZvdW5kYXRpb24ub3JnL1VBLzIwMDgvMDIvVHlwZXMueHNkIiB4bWxuczp4c
+        z0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiPgogPHhzOmltcG9ydCBuYW1lc
+        3BhY2U9Imh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9VQS8yMDA4LzAyL1R5cGVzLnhzZCIvP
+        gogPHhzOnNpbXBsZVR5cGUgbmFtZT0iUHVtcFN0YXR1c1R5cGUiPgogIDx4czpyZXN0cmljd
+        GlvbiBiYXNlPSJ4czpzdHJpbmciPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9Ik9LXzAiL
+        z4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJMaW1pdEFsYXJtXzEiLz4KICAgPHhzOmVud
+        W1lcmF0aW9uIHZhbHVlPSJGYXVsdF8yIi8+CiAgPC94czpyZXN0cmljdGlvbj4KIDwveHM6c
+        2ltcGxlVHlwZT4KIDx4czplbGVtZW50IHR5cGU9InRuczpQdW1wU3RhdHVzVHlwZSIgbmFtZ
+        T0iUHVtcFN0YXR1c1R5cGUiLz4KIDx4czpjb21wbGV4VHlwZSBuYW1lPSJMaXN0T2ZQdW1wU
+        3RhdHVzVHlwZSI+CiAgPHhzOnNlcXVlbmNlPgogICA8eHM6ZWxlbWVudCBtaW5PY2N1cnM9I
+        jAiIG1heE9jY3Vycz0idW5ib3VuZGVkIiB0eXBlPSJ0bnM6UHVtcFN0YXR1c1R5cGUiIG5hb
+        WU9IlB1bXBTdGF0dXNUeXBlIiBuaWxsYWJsZT0idHJ1ZSIvPgogIDwveHM6c2VxdWVuY2U+C
+        iA8L3hzOmNvbXBsZXhUeXBlPgogPHhzOmVsZW1lbnQgdHlwZT0idG5zOkxpc3RPZlB1bXBTd
+        GF0dXNUeXBlIiBuYW1lPSJMaXN0T2ZQdW1wU3RhdHVzVHlwZSIgbmlsbGFibGU9InRydWUiL
+        z4KPC94czpzY2hlbWE+Cg==</uax:ByteString>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6007" NodeId="ns=1;i=6008" BrowseName="NamespaceUri">
+        <DisplayName>NamespaceUri</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6007</Reference>
+        </References>
+        <Value>
+            <uax:String>http://yourorganisation.org/Pump/Types.xsd</uax:String>
+        </Value>
+    </UAVariable>
     <UAObjectType NodeId="ns=1;i=1002" BrowseName="1:PumpType">
         <DisplayName>PumpType</DisplayName>
         <References>
@@ -42,7 +150,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1002</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6003" BrowseName="1:status" UserAccessLevel="3" AccessLevel="3">
+    <UAVariable DataType="PumpStatusType" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6003" BrowseName="1:status" UserAccessLevel="3" AccessLevel="3">
         <DisplayName>status</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
