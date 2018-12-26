@@ -11,7 +11,7 @@ const server = new opcua.OPCUAServer({
 });
 
 // Set the buildInfo
-server.buildInfo.productName = 'Pump simulator';
+server.buildInfo.productName = 'Pump Simulator';
 server.buildInfo.buildNumber = '001';
 server.buildInfo.buildDate = new Date(2018, 12, 26);
 

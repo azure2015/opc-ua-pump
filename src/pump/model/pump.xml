@@ -17,7 +17,7 @@
     </Aliases>
     <Extensions>
         <Extension>
-            <ua:ModelInfo Tool="UaModeler" Hash="IWoaNSvP1T0ayjKLp2Ahnw==" Version="1.5.2"/>
+            <ua:ModelInfo Tool="UaModeler" Hash="yyzGVl5+HGFKxsdSKAvThw==" Version="1.5.2"/>
         </Extension>
     </Extensions>
     <UADataType NodeId="ns=1;i=3002" BrowseName="1:PumpStatusType">
@@ -35,9 +35,9 @@
     <UAVariable DataType="LocalizedText" ParentNodeId="ns=1;i=3002" ValueRank="1" NodeId="ns=1;i=6004" ArrayDimensions="3" BrowseName="EnumStrings">
         <DisplayName>EnumStrings</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3002</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
         </References>
         <Value>
             <uax:ListOfLocalizedText>
@@ -57,8 +57,8 @@
         <DisplayName>TypeDictionary</DisplayName>
         <Description>Collects the data type descriptions of http://yourorganisation.org/Pump/</Description>
         <References>
-            <Reference ReferenceType="HasProperty">ns=1;i=6006</Reference>
             <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6006</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">i=93</Reference>
         </References>
         <Value>
@@ -79,8 +79,8 @@
     <UAVariable DataType="String" ParentNodeId="ns=1;i=6005" NodeId="ns=1;i=6006" BrowseName="NamespaceUri">
         <DisplayName>NamespaceUri</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6005</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
         </References>
         <Value>
             <uax:String>http://yourorganisation.org/Pump/</uax:String>
@@ -90,8 +90,8 @@
         <DisplayName>TypeDictionary</DisplayName>
         <Description>Collects the data type descriptions of http://yourorganisation.org/Pump/</Description>
         <References>
-            <Reference ReferenceType="HasProperty">ns=1;i=6008</Reference>
             <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6008</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">i=92</Reference>
         </References>
         <Value>
@@ -118,8 +118,8 @@
     <UAVariable DataType="String" ParentNodeId="ns=1;i=6007" NodeId="ns=1;i=6008" BrowseName="NamespaceUri">
         <DisplayName>NamespaceUri</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6007</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
         </References>
         <Value>
             <uax:String>http://yourorganisation.org/Pump/Types.xsd</uax:String>
@@ -131,6 +131,7 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6001</Reference>
             <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6002</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6009</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6003</Reference>
         </References>
     </UAObjectType>
@@ -144,6 +145,14 @@
     </UAVariable>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6002" BrowseName="1:rpm" UserAccessLevel="3" AccessLevel="3">
         <DisplayName>rpm</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6009" BrowseName="1:setpoint" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>setpoint</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
