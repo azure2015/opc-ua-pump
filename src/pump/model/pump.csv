@@ -1,0 +1,4 @@
+PumpType,1002,ObjectType
+PumpType_name,6001,Variable
+PumpType_rpm,6002,Variable
+PumpType_status,6003,Variable
